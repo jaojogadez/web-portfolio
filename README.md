@@ -1,2 +1,2 @@
-# web-portfolio
- Meu portifólio para o web desenvolvimento! :D
+# Seja bem vindo ao meu Web Portifolio !
+Site em desenvolvimento...
