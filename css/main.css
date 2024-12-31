@@ -3,4 +3,15 @@
 :root{
     --main-color: #007ACC; 
     --secondary-color: #0F172A;
+    --main-font: "Playfair Display SC", serif;
+    --secondary-font: "Inter", sans-serif;
+}
+.text{
+    font: normal normal 1em arial;
+}
+.text-title{
+    font-family: var(--main-font);
+}
+.text-body{
+    font-family: var(--secondary-font);
 }
