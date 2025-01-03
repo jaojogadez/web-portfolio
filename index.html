@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +27,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="container text-white" data-bs-theme="dark">
+      <div class="container-sm text-center mb-4" id="profile">
+        <img 
+          src="assets/avatar.png" 
+          alt="Foto de João Pedro sorrindo, usando camisa preta e fundo amarelo."
+          class="img-fluid"
+          >
+          <p>@jaocodadez</p>
+      </div>
+      <ul class="list-unstyled text-center">
+        <li>
+          <a href="#" target="_blank" class="text-decoration-none text-light">Entre em Contato</a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="text-decoration-none text-light">Instagram</a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="text-decoration-none text-light">Github</a>
+        </li>
+        <li>
+          <a href="#" target="_self" class="text-decoration-none text-light">Ver meus Projetos</a>
+        </li>
+      </ul>
+    </div>
+
     <nav class="navbar shadow">
       <div class="container-lg">
         <a class="navbar-brand fw-semibold" href="#">
@@ -43,7 +68,6 @@
     </nav>
     <div class="container px-4 py-5" id="custom-cards">
       <h2 class="pb-2 border-bottom" data-aos="fade-down">Projects:</h2>
-  
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col" data-aos="fade-up">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
