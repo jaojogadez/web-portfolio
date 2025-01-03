@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light" class="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container text-white" data-bs-theme="dark">
+    <div class="container" data-bs-theme="dark">
       <div class="container-sm text-center mb-4" id="profile">
         <img 
           src="assets/avatar.png" 
@@ -36,20 +36,35 @@
           >
           <p>@jaocodadez</p>
       </div>
-      <ul class="list-unstyled text-center">
+      <ul class="list-unstyled text-center mb-4">
         <li>
-          <a href="#" target="_blank" class="text-decoration-none text-light">Entre em Contato</a>
+          <a href="https://wa.me/14920006654" target="_blank" class="text-decoration-none gap-2">
+            Entre em Contato <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="text-decoration-none text-light">Instagram</a>
+          <a href="https://www.instagram.com/jao_oliviera/" target="_blank" class="text-decoration-none gap-2">
+            Instagram <ion-icon name="logo-instagram"></ion-icon>
+          </a>
         </li>
         <li>
-          <a href="#" target="_blank" class="text-decoration-none text-light">Github</a>
+          <a href="https://github.com/jaojogadez" target="_blank" class="text-decoration-none gap-2">
+            Github <ion-icon name="logo-github"></ion-icon>
+          </a>
         </li>
         <li>
-          <a href="#" target="_self" class="text-decoration-none text-light">Ver meus Projetos</a>
+          <a href="#" target="_self" class="text-decoration-none">Ver meus Projetos</a>
         </li>
       </ul>
+      <div class="container-sm d-flex py-2 gap-4 fs-3 justify-content-center" id="social-links">
+        <ion-icon name="logo-github"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </div>
+      <footer class="mt-5 text-center">
+        Feito com <ion-icon name="heart"></ion-icon> por João Pedro D. Oliveira
+      </footer>
     </div>
 
     <nav class="navbar shadow">
@@ -139,5 +154,7 @@
     <script>
         AOS.init();
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
