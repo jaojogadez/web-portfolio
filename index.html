@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light" class="light">
+<html lang="en" data-bs-theme="light" class="">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,47 +27,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container" data-bs-theme="dark">
-      <div class="container-sm text-center mb-4" id="profile">
-        <img 
-          src="assets/avatar.png" 
-          alt="Foto de João Pedro sorrindo, usando camisa preta e fundo amarelo."
-          class="img-fluid"
-          >
-          <p>@jaocodadez</p>
+    <div class="container-xxl">
+      <div class="container">
+        <div class="container-sm text-center mb-4" id="profile">
+          <img
+            src="assets/avatar.png"
+            alt="Foto de João Pedro sorrindo, usando camisa preta e fundo amarelo."
+            class="img-fluid"
+            >
+            <p>@jaocodadez</p>
+        </div>
+        <ul class="list-unstyled text-center mb-4">
+          <li>
+            <a href="https://wa.me/14920006654" target="_blank" class="text-decoration-none gap-2">
+              Contact - me <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/jao_oliviera/" target="_blank" class="text-decoration-none gap-2">
+              Instagram <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/jaojogadez" target="_blank" class="text-decoration-none gap-2">
+              Github <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_self" class="text-decoration-none">View my projects</a>
+          </li>
+        </ul>
+        <div class="container-sm d-flex py-2 gap-4 fs-3 justify-content-center" id="social-links">
+          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </div>
+        <footer class="mt-5 text-center">
+          Feito com <ion-icon name="heart"></ion-icon> por João Pedro D. Oliveira
+        </footer>
       </div>
-      <ul class="list-unstyled text-center mb-4">
-        <li>
-          <a href="https://wa.me/14920006654" target="_blank" class="text-decoration-none gap-2">
-            Entre em Contato <ion-icon name="logo-whatsapp"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/jao_oliviera/" target="_blank" class="text-decoration-none gap-2">
-            Instagram <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/jaojogadez" target="_blank" class="text-decoration-none gap-2">
-            Github <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_self" class="text-decoration-none">Ver meus Projetos</a>
-        </li>
-      </ul>
-      <div class="container-sm d-flex py-2 gap-4 fs-3 justify-content-center" id="social-links">
-        <ion-icon name="logo-github"></ion-icon>
-        <ion-icon name="logo-instagram"></ion-icon>
-        <ion-icon name="logo-youtube"></ion-icon>
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </div>
-      <footer class="mt-5 text-center">
-        Feito com <ion-icon name="heart"></ion-icon> por João Pedro D. Oliveira
-      </footer>
     </div>
 
-    <nav class="navbar shadow">
+    <nav class="navbar shadow rounded-pill mx-3 bg-dark" data-aos="fade-down">
       <div class="container-lg">
         <a class="navbar-brand fw-semibold" href="#">
           <img 
@@ -77,11 +79,11 @@
             class="d-inline-block align-text-top rounded-circle"
             data-aos="fade-up"
             >
-          <span data-aos="fade-up" data-aos-delay="300">jaocodadez</span>
+          <span data-aos="fade-up" data-aos-delay="300" class="fs-5 display-6 fw-semibold">jaocodadez</span>
         </a>
       </div>
     </nav>
-    <div class="container px-4 py-5" id="custom-cards">
+    <div class="container-xl px-4 py-5" id="custom-cards">
       <h2 class="pb-2 border-bottom" data-aos="fade-down">Projects:</h2>
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col" data-aos="fade-up">

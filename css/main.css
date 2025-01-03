@@ -5,25 +5,30 @@
     --secondary-color: #0F172A;
     --main-font: "Playfair Display SC", serif;
     --secondary-font: "Inter", sans-serif;
+
     --text-color: white;
     --bg-url: url('../assets/bg-mobile.jpg');
+    --stroke-color: rgb(255, 255, 255, 0.5);
+    --surface-color:  rgb(255, 255, 255, 0.05);
+    --surface-color-hover:  rgb(255, 255, 255, 0.02);
 }
 .light{
     --text-color: black;
     --bg-url: url('../assets/bg-mobile-light.jpg');
+    --stroke-color: rgb(0, 0, 0, 0.5);
+    --surface-color:  rgb(0, 0, 0, 0.05);
+    --surface-color-hover:  rgb(255, 255, 255, 0.02);
 }
 body{
     background: var(--bg-url) no-repeat top center/cover local;
     font-family: var(--secondary-font);
 }
 .navbar ,#custom-cards{
-    display: none;
+    display: block;
+    color: var(--text-color);
 }
-.text-title{
-    font-family: var(--main-font);
-}
-.text-body{
-    font-family: var(--secondary-font);
+.navbar span{
+    color: var(--text-color);
 }
 .col{
     cursor: pointer;
@@ -32,6 +37,12 @@ body{
     width: 360px;
     margin-top: 56px;
     padding: 0 24px;
+    transform: translateY(-50px);
+}
+.container-xxl{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 .container, a, a:hover{
     color: var(--text-color);
@@ -54,8 +65,8 @@ ul li a{
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
-    background: rgb(255, 255, 255, 0.1);
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -63,8 +74,8 @@ ul li a{
     transition: all 0.3s;
 }
 ul li a:hover{
-    background: rgb(255, 255, 255, 0.05);
-    border: 1.5px solid black;
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
 #social-links a{
     display: flex;
