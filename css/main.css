@@ -11,6 +11,9 @@
     --stroke-color: rgb(255, 255, 255, 0.5);
     --surface-color:  rgb(255, 255, 255, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
+    --bg-navbar: #212529;
+    --glass-effect: none;
+    --switch-bg-url: white url('../assets/moon-stars.svg') no-repeat center;
 }
 .light{
     --text-color: black;
@@ -18,14 +21,23 @@
     --stroke-color: rgb(0, 0, 0, 0.5);
     --surface-color:  rgb(0, 0, 0, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
+    --bg-navbar: rgb(255, 255, 255, 0.25);
+    --glass-effect: blur(10px) saturate(120%);
+    --switch-bg-url: white url('../assets/sun.svg') no-repeat center;
 }
-body{
+body, html{
     background: var(--bg-url) no-repeat top center/cover local;
     font-family: var(--secondary-font);
+    scroll-behavior: smooth;
+    scroll-margin-top: 3rem;
 }
 .navbar ,#custom-cards{
     display: block;
     color: var(--text-color);
+}
+.navbar{
+    background-color: var(--bg-navbar);
+    backdrop-filter: var(--glass-effect);
 }
 .navbar span{
     color: var(--text-color);
@@ -37,7 +49,6 @@ body{
     width: 360px;
     margin-top: 56px;
     padding: 0 24px;
-    transform: translateY(-50px);
 }
 .container-xxl{
     min-height: 100vh;
@@ -55,7 +66,36 @@ body{
     font-weight: 500;
     margin-top: 15px;
 }
-ul{
+.switch{
+    width: 64px;
+    margin: 4px auto;
+}
+.switch button{
+    width: 32px;
+    height: 32px;
+    background: var(--switch-bg-url);
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.light .switch button{
+    right: 0;
+    left: initial;
+}
+.switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.container ul{
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -76,14 +116,4 @@ ul li a{
 ul li a:hover{
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
-}
-#social-links a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#social-links a:hover{
-    background: rgb(255, 255, 255, 0.2);
-    padding: 16px;
-    border-radius: 50%;
 }
