@@ -42,9 +42,6 @@ body, html{
 .navbar span{
     color: var(--text-color);
 }
-.col{
-    cursor: pointer;
-}
 .container{
     width: 360px;
     margin-top: 56px;
@@ -117,3 +114,26 @@ ul li a:hover{
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
+.card{
+    cursor: pointer;
+    transition: ease-in-out 8s;
+    background-position: top !important;
+    background-size: cover !important;
+}
+.card:hover{
+    background-position: bottom !important;
+}
+.card .lh-1{
+    text-shadow: 4px 4px 7px black !important;
+}
+/* projects start */
+#echolights{
+    background: url('../assets/projects/echo-lights-page.png') no-repeat;
+}
+#payment-page{
+    background: url('../assets/projects/payment-page.png') no-repeat;
+}
+#crud{
+    background: url('../assets/projects/crud-app.png');
+}
+/* projects end */
