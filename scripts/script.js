@@ -15,3 +15,14 @@ function toggleMode(){
         image.setAttribute("alt", "Foto de João Pedro sorrindo, usando camisa preta e fundo amarelo.")
     }
 }
+
+// window.addEventListener("scroll", function(){
+//     let scrollTop = this.window.scrollY
+//     let nav = this.document.querySelector(".navbar")
+//     console.log(scrollTop)
+//     if(scrollTop > 700){
+//         nav.classList.add("fixed") 
+//     }else{
+//         nav.classList.remove("fixed")
+//     }
+// })

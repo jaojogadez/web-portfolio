@@ -29,7 +29,7 @@ body, html{
     background: var(--bg-url) no-repeat top center/cover local;
     font-family: var(--secondary-font);
     scroll-behavior: smooth;
-    scroll-margin-top: 3rem;
+    scroll-margin-top: 3rem !important;
 }
 .navbar ,#custom-cards{
     display: block;
@@ -119,6 +119,7 @@ ul li a:hover{
     transition: ease-in-out 8s;
     background-position: top !important;
     background-size: cover !important;
+    height: 180px !important;
 }
 .card:hover{
     background-position: bottom !important;
