@@ -38,6 +38,9 @@ body, html{
 .navbar{
     background-color: var(--bg-navbar);
     backdrop-filter: var(--glass-effect);
+    position: sticky;
+    top: 1rem;
+    z-index: 9999;
 }
 .navbar span{
     color: var(--text-color);
