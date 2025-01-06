@@ -10,9 +10,17 @@
     --stroke-color: rgb(255, 255, 255, 0.5);
     --surface-color:  rgb(255, 255, 255, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
-    --bg-navbar: #212529;
+    --bg-dark: #212529;
+    --bg-modal: #212529;
     --glass-effect: none;
     --switch-bg-url: white url('../assets/moon-stars.svg') no-repeat center;
+}
+.dropdown-menu{
+    background-color: var(--bg-dark);
+}
+.dropdown-item{
+    color: var(--text-color) !important;
+
 }
 .light{
     --text-color: black;
@@ -20,7 +28,8 @@
     --stroke-color: rgb(0, 0, 0, 0.5);
     --surface-color:  rgb(0, 0, 0, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
-    --bg-navbar: rgb(255, 255, 255, 0.25);
+    --bg-dark: rgb(255, 255, 255, 0.25);
+    --bg-modal: rgb(255, 255, 255, 0.95);
     --glass-effect: blur(10px) saturate(120%);
     --switch-bg-url: white url('../assets/sun.svg') no-repeat center;
 }
@@ -30,12 +39,12 @@ body, html{
     scroll-behavior: smooth;
     scroll-margin-top: 3rem !important;
 }
-.navbar ,#custom-cards{
+.navbar ,#custom-cards, #addProjectBtn, .modal-content, label{
     display: block;
     color: var(--text-color);
 }
 .navbar{
-    background-color: var(--bg-navbar);
+    background-color: var(--bg-dark);
     backdrop-filter: var(--glass-effect);
     position: sticky;
     top: 1rem;
@@ -141,15 +150,23 @@ ul li a:hover{
 .bi-plus-square{
     font-size: 5.5em;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .bi-plus-square:hover{
     scale: 1.1;
-    color: lightblue;
+    color: var(--main-color);
 }
 .card .bi-app-indicator{
     font-size: 4em;
 }
 .card .bi-app-indicator:hover{
     color: lightgray;
+}
+.modal-content{
+    background-color: var(--bg-modal);
+    border: 0;
+}
+.modal-title{
+    color: var(--main-color);
+    letter-spacing: 2px;
 }

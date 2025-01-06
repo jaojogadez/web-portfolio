@@ -78,10 +78,10 @@
           <span data-aos="fade-up" data-aos-delay="300" class="fs-5 display-6 fw-semibold">jaocodadez</span>
         </a>
         <div class="d-flex align-items-center">
-          <span>
+          <span data-aos="fade-up" data-aos-delay="50">
             <a href="#" class="text">Back to top</a>
           </span>
-          <div class="position-relative switch mx-3">
+          <div class="position-relative switch mx-3" data-aos="fade-up" data-aos-delay="100">
             <button></button>
             <span class="rounded-pill"></span>
           </div>
@@ -127,8 +127,115 @@
             </div>
           </div>
         </div>
-        <div class="col d-flex align-items-center justify-content-center">
-          <i class="bi bi-plus-square"></i>
+        <div class="col d-flex align-items-center justify-content-center" data-aos="fade-left">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="addProjectBtn">
+            <i class="bi bi-plus-square"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-uppercase display-4 fw-semibold" id="staticBackdropLabel">Add new project</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="" method="post" autocomplete="off">
+            <div class="modal-body">
+              <p>Preencha os campos abaixo:</p>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control text-bg-dark"
+                      id="floatingName"
+                      placeholder="nameProject">
+                    <label for="floatingName">Name of Project</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating mb-3">
+                    <input 
+                      type="text" 
+                      class="form-control text-bg-dark" 
+                      id="floatingImageURL" 
+                      placeholder="imageUrl">
+                    <label for="floatingImageURL">URL image</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  class="form-control text-bg-dark" 
+                  id="floatingDescription" 
+                  placeholder="imageUrl">
+                <label for="floatingDescription">Description</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  class="form-control text-bg-dark" 
+                  id="floatingLinkAccess" 
+                  placeholder="imageUrl">
+                <label for="floatingLinkAccess">Acces Link</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  class="form-control text-bg-dark" 
+                  id="floatingLinkCode" 
+                  placeholder="imageUrl">
+                <label for="floatingLinkCode">Code Link</label>
+              </div>
+              <!-- <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Technologies
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="p-2">
+                    <div class="form-check">
+                      <input 
+                        type="checkbox" 
+                        class="form-check-input prevent-close" 
+                        value="devicon-html5-plain colored fs-4" 
+                        id="skillHTML" 
+                        >
+                      <label 
+                        class="form-check-label" 
+                        for="skillHTML"
+                        >
+                        <i class="devicon-html5-plain colored fs-4"></i>
+                      </label>          
+                    </div>
+                  </li>
+                  <li class="p-2">
+                    <div class="form-check">
+                      <input 
+                        type="checkbox" 
+                        class="form-check-input prevent-close" 
+                        value="devicon-css3-plain colored fs-4" 
+                        id="skillCSS" 
+                        >
+                      <label 
+                        class="form-check-label" 
+                        for="skillCSS"
+                        >
+                        <i class="devicon-css3-plain colored fs-4"></i>
+                      </label>          
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Create</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
