@@ -16,10 +16,23 @@ function toggleMode(){
     }
 }
 
+let cards = document.querySelectorAll(".card")
+cards.forEach(card => {
+    let icone = card.querySelector("i")
+    card.addEventListener("mouseover", function() {
+        icone.classList.remove("d-none")
+    })
+    card.addEventListener("mouseout", function() {
+        icone.classList.add("d-none")
+    })
+})
+
 let links = {
     access: "https://example.com",
     code: "https://example.com"
 }
+
+const addBtn = document.querySelector(".bi-plus-square").parentElement
 
 function createNewProject(name, image, description, links, skills){
     const strutureProject = `
@@ -48,4 +61,5 @@ function createNewProject(name, image, description, links, skills){
           </div>
         </div>
     `
+    addBtn.insertAdjacentHTML("beforebegin", strutureProject)
 }

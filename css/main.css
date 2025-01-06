@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 :root{
     --main-color: #007ACC; 
     --secondary-color: #0F172A;
@@ -126,9 +125,7 @@ ul li a:hover{
 }
 .card:hover{
     background-position: bottom !important;
-}
-.card .lh-1{
-    text-shadow: 4px 4px 7px black !important;
+    border-image: fill 0 linear-gradient(#0005, #000);
 }
 /* projects start */
 #echolights{
@@ -141,3 +138,18 @@ ul li a:hover{
     background: url('../assets/projects/crud-app.png');
 }
 /* projects end */
+.bi-plus-square{
+    font-size: 5.5em;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.bi-plus-square:hover{
+    scale: 1.1;
+    color: lightblue;
+}
+.card .bi-app-indicator{
+    font-size: 4em;
+}
+.card .bi-app-indicator:hover{
+    color: lightgray;
+}
