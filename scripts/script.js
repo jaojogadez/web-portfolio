@@ -42,7 +42,10 @@ let links = {
   code: "https://example.com"
 }
 
-const addBtn = document.querySelector(".bi-plus-square").parentElement
+let skills = []
+
+const addBtn = document.querySelector(".bi-plus-square")
+const newProjectPlace = addBtn.parentElement.parentElement
 
 function createNewProject(name, image, description, links, skills){
   const strutureProject = `
@@ -56,26 +59,55 @@ function createNewProject(name, image, description, links, skills){
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="${links.access}">
+                  <a href="${links.access}" target="_blank">
                     <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-app-indicator"></i> Access</button>
                   </a>
-                  <a href="${links.code}">
+                  <a href="${links.code}" target="_blank">
                     <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Code</button>
                   </a>
                 </div>
-                <small class="text-muted" id="skills">      
-                  
+                <small class="text-muted" id="skills">
+                ${skills.map(skill => ` <i class="${skill}"></i>` ).join('')}
                 </small>
               </div>
             </div>
           </div>
         </div>
     `
-  addBtn.insertAdjacentHTML("beforebegin", strutureProject)
+  newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject)
 }
 
-document.querySelectorAll('.prevent-close').forEach(function (checkbox) {
-  checkbox.addEventListener('click', function (event) {
-    event.stopPropagation();
-  });
-});
+createNewProject(
+    "Security Hacking", 
+    "./assets/projects/secking-page.png", 
+    "Landing Page feita com HTML e CSS puro e Bootstrap, oferece layout responsivo em todos os dispositivos.",
+    links,
+    skills
+  )
+  
+createNewProject(
+    "Disk Diarista", 
+    "./assets/projects/disk-diarista-page.png", 
+    "Landing Page feita com HTML e CSS puro, oferece layout responsivo em todos os dispositivos.",
+    links,
+    skills
+  )
+
+
+const containerSkills = document.querySelector("#skills-container")
+const skillsInput = document.querySelector("#skillsInput")
+
+let technologies = [
+  "git",
+  "google",
+  "bootstrap",
+  "javascript",
+  "css3",
+  "html5"
+]
+
+let selectedSkills = []
+
+skillsInput.addEventListener("input", function(){
+
+})

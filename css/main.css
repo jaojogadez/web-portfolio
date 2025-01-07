@@ -15,13 +15,6 @@
     --glass-effect: none;
     --switch-bg-url: white url('../assets/moon-stars.svg') no-repeat center;
 }
-.dropdown-menu{
-    background-color: var(--bg-dark);
-}
-.dropdown-item{
-    color: var(--text-color) !important;
-
-}
 .light{
     --text-color: black;
     --bg-url: url('../assets/bg-mobile-light.jpg');
@@ -134,7 +127,6 @@ ul li a:hover{
 }
 .card:hover{
     background-position: bottom !important;
-    border-image: fill 0 linear-gradient(#0005, #000);
 }
 /* projects start */
 #echolights{
@@ -170,3 +162,8 @@ ul li a:hover{
     color: var(--main-color);
     letter-spacing: 2px;
 }
+
+.custom-select2 {
+    all: unset ; /* Remove estilos aplicados anteriormente */
+    display: block; /* Garante que o Select2 funcione corretamente */
+  }
