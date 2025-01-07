@@ -27,8 +27,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>      
   </head>
   <body>
     <div class="container-xxl">
@@ -96,11 +94,7 @@
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col" data-aos="fade-up">
           <div class="shadow-lg rounded-bottom rounded-top">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center" id="echolights">
-              <a href="https://jaojogadez.github.io/landing-page-echo-lights/" target="_blank"></a>
-                <i class="bi bi-app-indicator d-none"></i> 
-              </a>
-            </div>
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center" id="echolights"></div>
             <div class="card-body text-bg-light p-3 rounded-bottom">
               <h3 class="lh-1 fw-semibold" id="name">Echo Lights</h3>
               <p class="card-text" id="description">
@@ -148,7 +142,7 @@
           <form action="" method="post" autocomplete="off">
             <div class="modal-body">
               <p>Preencha os campos abaixo:</p>
-              <div class="row g-2">
+              <div class="row g-2 align-items-center">
                 <div class="col-md">
                   <div class="form-floating mb-3">
                     <input
@@ -160,13 +154,13 @@
                   </div>
                 </div>
                 <div class="col-md">
-                  <div class="form-floating mb-3">
+                  <div class="form-group mb-3">
                     <input 
-                      type="text" 
-                      class="form-control text-bg-dark" 
+                      type="file" 
+                      class="form-control " 
                       id="floatingImageURL" 
-                      placeholder="imageUrl">
-                    <label for="floatingImageURL">URL image</label>
+                      accept="image/*"
+                      >
                   </div>
                 </div>
               </div>
@@ -200,15 +194,22 @@
                   </div>
                 </div>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control text-bg-dark"
-                  id="skillsInput"
-                  placeholder="imageUrl">
-                <label for="skillsInput">Skills</label>
+              <div class="row g-2 align-items-center">
+                <div class="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control text-bg-dark"
+                      id="skillsInput"
+                      placeholder="Technologies">
+                    <label for="skillsInput">Technologies</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <input type="submit" value="Submit" id="skill-btn" class="btn btn-primary btn-sm">
+                </div>
               </div>
-              <div id="skills-container" class="form-floating"></div>
+              <div id="skills-container" class="form-floating d-flex align-items-center gap-2 flex-wrap"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

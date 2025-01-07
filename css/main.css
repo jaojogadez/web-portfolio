@@ -11,6 +11,7 @@
     --surface-color:  rgb(255, 255, 255, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
     --bg-dark: #212529;
+    --bg-list: #3e454d;
     --bg-modal: #212529;
     --glass-effect: none;
     --switch-bg-url: white url('../assets/moon-stars.svg') no-repeat center;
@@ -22,6 +23,7 @@
     --surface-color:  rgb(0, 0, 0, 0.05);
     --surface-color-hover:  rgb(255, 255, 255, 0.02);
     --bg-dark: rgb(255, 255, 255, 0.25);
+    --bg-list: rgb(255, 255, 255, 0.25);
     --bg-modal: rgb(255, 255, 255, 0.95);
     --glass-effect: blur(10px) saturate(120%);
     --switch-bg-url: white url('../assets/sun.svg') no-repeat center;
@@ -163,7 +165,12 @@ ul li a:hover{
     letter-spacing: 2px;
 }
 
-.custom-select2 {
-    all: unset ; /* Remove estilos aplicados anteriormente */
-    display: block; /* Garante que o Select2 funcione corretamente */
-  }
+.skill-item {
+    background-color:  var(--bg-list);
+    padding: 5px 10px;
+    width: max-content;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+  

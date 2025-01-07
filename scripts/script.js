@@ -26,23 +26,41 @@ function toggleMode(){
   }
 }
 
-let cards = document.querySelectorAll(".card")
-cards.forEach(card => {
-  let icone = card.querySelector("i")
-  card.addEventListener("mouseover", function() {
-    icone.classList.remove("d-none")
-  })
-  card.addEventListener("mouseout", function() {
-    icone.classList.add("d-none")
-  })
-})
+let skills = []
+
+const skillList = document.querySelector("#skills-container")
+const skillInput = document.querySelector("#skillsInput")
+const addSkillBtn = document.querySelector("#skill-btn")
+
+addSkillBtn.addEventListener("click", (e) => {
+  e.preventDefault()
+  const skill = skillInput.value.trim();
+  if (skill && !skills.includes(skill)) {
+    skills.push(skill)
+    updateSkillList()
+    skillInput.value = ""
+  }
+});
+
+function updateSkillList() {
+  skillList.innerHTML = skills.map((skill, index) => `
+  <span class="skill-item rounded-pill px-4 gap-3 mb-3 shadow text-uppercase">
+      ${skill} 
+      <button type="button" class="btn-close" onclick="removeSkill(${index})" style="color: white;"></button>
+    </span>`)
+  .join("")
+}
+
+function removeSkill(index) {
+  skills.splice(index, 1)
+  updateSkillList()
+}
+
 
 let links = {
   access: "https://example.com",
   code: "https://example.com"
 }
-
-let skills = []
 
 const addBtn = document.querySelector(".bi-plus-square")
 const newProjectPlace = addBtn.parentElement.parentElement
@@ -77,37 +95,3 @@ function createNewProject(name, image, description, links, skills){
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject)
 }
 
-createNewProject(
-    "Security Hacking", 
-    "./assets/projects/secking-page.png", 
-    "Landing Page feita com HTML e CSS puro e Bootstrap, oferece layout responsivo em todos os dispositivos.",
-    links,
-    skills
-  )
-  
-createNewProject(
-    "Disk Diarista", 
-    "./assets/projects/disk-diarista-page.png", 
-    "Landing Page feita com HTML e CSS puro, oferece layout responsivo em todos os dispositivos.",
-    links,
-    skills
-  )
-
-
-const containerSkills = document.querySelector("#skills-container")
-const skillsInput = document.querySelector("#skillsInput")
-
-let technologies = [
-  "git",
-  "google",
-  "bootstrap",
-  "javascript",
-  "css3",
-  "html5"
-]
-
-let selectedSkills = []
-
-skillsInput.addEventListener("input", function(){
-
-})
