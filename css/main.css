@@ -176,9 +176,9 @@ ul li a:hover{
 
 /* Upload file */
 .content {
-    height: 200px; /* Diminuído para se adaptar ao modal */
-    width: 100%; /* Adapta-se ao modal */
-    max-width: 250px; /* Define um tamanho máximo */
+    height: 200px;
+    width: 100%; 
+    max-width: 250px; 
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@ ul li a:hover{
     padding: 8px;
     gap: 5px;
     background-color: rgba(0, 110, 255, 0.041);
-    margin: 0 auto; /* Centraliza dentro do modal */
+    margin: 0 auto; 
 }
 
 .header {
@@ -199,17 +199,17 @@ ul li a:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 5px; /* Adiciona um pequeno espaçamento interno */
+    padding: 5px;
 }
 
 .header svg {
-    height: 70px; /* Diminuído para se ajustar ao tamanho reduzido */
+    height: 70px; 
     width: 70px;
 }
 
 .header p {
     text-align: center;
-    font-size: 0.9rem; /* Ajuste do tamanho da fonte */
+    font-size: 0.9rem; 
     color: var(--text-color);
 }
 
@@ -217,7 +217,7 @@ ul li a:hover{
     stroke: var(--text-color) !important;
 }
 
-.footer {
+.footer{
     background-color: rgba(0, 110, 255, 0.075);
     width: 100%;
     height: 35px;
@@ -232,7 +232,7 @@ ul li a:hover{
 }
 
 .footer svg {
-    height: 110%; /* Ajuste proporcional */
+    height: 110%; 
     fill: royalblue;
     background-color: rgba(70, 66, 66, 0.103);
     border-radius: 50%;
@@ -244,10 +244,13 @@ ul li a:hover{
 .footer p {
     flex: 1;
     text-align: center;
-    font-size: 0.85rem; /* Diminuído para consistência */
+    font-size: 0.85rem;
     color: var(--text-color);
 }
 
 #file {
     display: none;
+}
+.active{
+    border: 2px solid forestgreen ;
 }
