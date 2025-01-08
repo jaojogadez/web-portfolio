@@ -95,3 +95,14 @@ function createNewProject(name, image, description, links, skills){
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject)
 }
 
+const form = document.querySelector("form")
+form.onsubmit = (e) => {
+  e.preventDefault()
+  const name = document.querySelector("#floatingName").value
+  const image = document.querySelector("#floatingImageURL").value
+  const description = document.querySelector("#floatingDescription").value
+  links.access = document.querySelector("#floatingLinkAccess").value
+  links.code = document.querySelector("#floatingLinkCode").value
+  createNewProject(name, image, description, links, skills)
+  console.log(`Nome: ${name} Descrição: ${description} Aceess ${links.access} code ${links.code}`)
+}
