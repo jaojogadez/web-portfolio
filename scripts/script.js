@@ -28,35 +28,6 @@ function toggleMode(){
 
 let skills = []
 
-const skillList = document.querySelector("#skills-container")
-const skillInput = document.querySelector("#skillsInput")
-const addSkillBtn = document.querySelector("#skill-btn")
-
-addSkillBtn.addEventListener("click", (e) => {
-  e.preventDefault()
-  const skill = skillInput.value.trim();
-  if (skill && !skills.includes(skill)) {
-    skills.push(skill)
-    updateSkillList()
-    skillInput.value = ""
-  }
-});
-
-function updateSkillList() {
-  skillList.innerHTML = skills.map((skill, index) => `
-  <span class="skill-item rounded-pill px-4 gap-3 mb-3 shadow text-uppercase">
-      ${skill} 
-      <button type="button" class="btn-close" onclick="removeSkill(${index})" style="color: white;"></button>
-    </span>`)
-  .join("")
-}
-
-function removeSkill(index) {
-  skills.splice(index, 1)
-  updateSkillList()
-}
-
-
 let links = {
   access: "https://example.com",
   code: "https://example.com"
@@ -95,14 +66,3 @@ function createNewProject(name, image, description, links, skills){
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject)
 }
 
-const form = document.querySelector("form")
-form.onsubmit = (e) => {
-  e.preventDefault()
-  const name = document.querySelector("#floatingName").value
-  const image = document.querySelector("#floatingImageURL").value
-  const description = document.querySelector("#floatingDescription").value
-  links.access = document.querySelector("#floatingLinkAccess").value
-  links.code = document.querySelector("#floatingLinkCode").value
-  createNewProject(name, image, description, links, skills)
-  console.log(`Nome: ${name} Descrição: ${description} Aceess ${links.access} code ${links.code}`)
-}
