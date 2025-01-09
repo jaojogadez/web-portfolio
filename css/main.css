@@ -190,7 +190,7 @@ ul li a:hover{
     margin: 0 auto; 
 }
 
-.header {
+.drop-zone {
     flex: 1;
     width: 100%;
     border: 2px dashed royalblue;
@@ -202,18 +202,18 @@ ul li a:hover{
     padding: 5px;
 }
 
-.header svg {
+.drop-zone svg {
     height: 70px; 
     width: 70px;
 }
 
-.header p {
+.drop-zone p {
     text-align: center;
     font-size: 0.9rem; 
     color: var(--text-color);
 }
 
-.content .header svg{
+.content .drop-zone svg{
     stroke: var(--text-color) !important;
 }
 
@@ -250,7 +250,4 @@ ul li a:hover{
 
 #file {
     display: none;
-}
-.active{
-    border: 2px solid forestgreen ;
 }
