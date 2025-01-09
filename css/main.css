@@ -175,19 +175,37 @@ ul li a:hover{
 }
 
 /* Upload file */
-.content {
-    height: 200px;
-    width: 100%; 
-    max-width: 250px; 
+.file-input {
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    place-items: center; 
     padding: 8px;
     gap: 5px;
     background-color: rgba(0, 110, 255, 0.041);
-    margin: 0 auto; 
+    cursor: pointer;
+    position: relative; 
+}
+
+.file-input .drop-zone {
+    text-align: center;
+}
+
+.file-input input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.file-input .drop-zone * {
+    z-index: 2; 
 }
 
 .drop-zone {
@@ -200,6 +218,19 @@ ul li a:hover{
     justify-content: center;
     flex-direction: column;
     padding: 5px;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.drop-zone img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 500ms;
+}
+
+.file-input:hover .drop-zone img{
+    opacity: 0.1;
 }
 
 .drop-zone svg {
@@ -213,7 +244,7 @@ ul li a:hover{
     color: var(--text-color);
 }
 
-.content .drop-zone svg{
+.file-input .drop-zone svg{
     stroke: var(--text-color) !important;
 }
 
@@ -248,6 +279,6 @@ ul li a:hover{
     color: var(--text-color);
 }
 
-#file {
-    display: none;
+.file-input.active > .drop-zone{
+    background-color: royalblue;
 }
