@@ -26,6 +26,16 @@ function toggleMode(){
   }
 }
 
+
+const form = document.querySelector("form")
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  
+
+  createNewProject(name, image, description, links, skills)
+})
+
+
 let skills = []
 
 let links = {
@@ -66,7 +76,7 @@ function createNewProject(name, image, description, links, skills){
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject)
 }
 
-// function add img start
+/* CREATE IMG MODAL START */
 const label = document.querySelector(".file-input")
 
 function onEnter(){
@@ -98,11 +108,18 @@ input.addEventListener("change", () => {
       dropzone.removeChild(document.querySelector("#cover"))
     }
 
-    const img = document.createElement("img")
-    img.id = "cover"
-    img.src = URL.createObjectURL(input.files[0])
+    const url = URL.createObjectURL(input.files[0])
+    dropzone.appendChild(createIMG(url))  
     
-    dropzone.appendChild(img)  
   }  
 })
-// function add img end
+
+function createIMG(url){
+ const card = document.createElement("div")
+ card.className = "card-modal"
+ card.id = "cover" 
+ card.style.backgroundImage = `url('${url}')`
+ return card
+}
+
+/* CREATE IMG MODAL END */
