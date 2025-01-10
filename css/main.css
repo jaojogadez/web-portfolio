@@ -378,3 +378,7 @@ ul li a:hover{
   transition: none;
   opacity: 1;
 }
+
+.alert{
+    transition: all .3s ease-in-out !important;
+}
