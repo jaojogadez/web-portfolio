@@ -59,11 +59,9 @@ input.addEventListener("change", () => {
       alert("Formato não permitido");
       return;
     }
-
     if (document.querySelector("#cover")) {
       dropzone.removeChild(document.querySelector("#cover"));
     }
-
     const url = URL.createObjectURL(input.files[0]);
     dropzone.appendChild(createIMG(url));
   }
@@ -110,8 +108,9 @@ let validateInputs = () => {
   return true;
 };
 
-let project = {};
-const addBtn = document.querySelector("#addBtn")
+let project = {}
+const addBtn = document.querySelector(".bi-plus-square")
+const newProjectPlace = addBtn.parentElement.parentElement
 
 let accepData = () => {
   let skills = document.querySelectorAll('input[type="checkbox"]:checked');
