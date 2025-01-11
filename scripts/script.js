@@ -131,7 +131,7 @@ let accepData = () => {
 
 let createProject = () => {
   const skills = project.technologies.map(technology => `<i class="devicon-${technology}-plain colored fs-4"></i>`).join(' ')
-  projects.innerHTML += `
+  let strutureProject = `
     <div class="col" data-aos="fade-up">
       <div class="shadow-lg rounded-bottom rounded-top">
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center" style="background-image: url('${project.imgurl}');"></div>
@@ -161,5 +161,6 @@ let createProject = () => {
       </div>
     </div>
     `;
+  newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject) 
 }
 /* CREATE PROJECT END */
