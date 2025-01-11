@@ -379,6 +379,6 @@ ul li a:hover{
   opacity: 1;
 }
 
-.alert{
-    transition: all .3s ease-in-out !important;
+label{
+    cursor: pointer;
 }
