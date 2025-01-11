@@ -382,3 +382,17 @@ ul li a:hover{
 label{
     cursor: pointer;
 }
+
+.dropdown{
+    top: 0;
+    right: 0;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.btn-dark{
+    border: 0;
+    background-color: transparent;
+}

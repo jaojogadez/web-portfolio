@@ -67,8 +67,8 @@ input.addEventListener("change", () => {
   }
 });
 
+const card = document.createElement("div");
 function createIMG(url) {
-  const card = document.createElement("div");
   card.className = "card-modal";
   card.id = "cover";
   card.style.backgroundImage = `url('${url}')`;
@@ -91,8 +91,8 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+let inputs = document.querySelectorAll(".form-control");
 let validateInputs = () => {
-  let inputs = document.querySelectorAll(".form-control");
   let inputsArray = Array.from(inputs).find((input) => !input.value);
   if (inputsArray || input.files.length === 0) {
     const alert = Object.assign(document.createElement("div"), {
@@ -133,7 +133,17 @@ let createProject = () => {
   let strutureProject = `
     <div class="col" data-aos="fade-up">
       <div class="shadow-lg rounded-bottom rounded-top">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center" style="background-image: url('${project.imgurl}');"></div>
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center" style="background-image: url('${project.imgurl}');">
+          <div class="dropdown position-absolute">
+            <button class="btn btn-dark btn-sm rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item"><i class="bi bi-pencil-square"></i> Edit</a></li>
+              <li><a class="dropdown-item text-bg-danger"><i class="bi bi-trash3"></i> Delete</a></li>
+            </ul>
+          </div>
+        </div>
           <div class="card-body text-bg-light p-3 rounded-bottom">
             <h3 class="lh-1 fw-semibold" id="name">${project.name}</h3>
             <p class="card-text" id="description">
@@ -161,5 +171,8 @@ let createProject = () => {
     </div>
     `;
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject) 
+  Array.from(inputs).forEach(input => {input.value = ""})
+  form.reset()
+  card.style.backgroundImage = `url('')`;
 }
 /* CREATE PROJECT END */
