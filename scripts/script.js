@@ -80,7 +80,6 @@ function createIMG(url) {
 /* CREATE PROJECT START */
 const form = document.querySelector("form");
 let projects = document.querySelector("#projects");
-console.log(projects);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -139,8 +138,8 @@ let createProject = () => {
               <i class="bi bi-three-dots-vertical"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item"><i class="bi bi-pencil-square"></i> Edit</a></li>
-              <li><a class="dropdown-item text-bg-danger"><i class="bi bi-trash3"></i> Delete</a></li>
+              <li><a class="dropdown-item" onClick="editPost(this)"><i class="bi bi-pencil-square"></i> Edit</a></li>
+              <li><a class="dropdown-item text-bg-danger" onClick="deletePost(this)"><i class="bi bi-trash3"></i> Delete</a></li>
             </ul>
           </div>
         </div>
@@ -171,8 +170,15 @@ let createProject = () => {
     </div>
     `;
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject) 
-  Array.from(inputs).forEach(input => {input.value = ""})
   form.reset()
   card.style.backgroundImage = `url('')`;
 }
 /* CREATE PROJECT END */
+
+let deletePost = (e) => {
+  e.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
+}
+
+let editPost = (e) =>{
+  Array.from(inputs).forEach(input => {input.value = e.parentElement})
+}
