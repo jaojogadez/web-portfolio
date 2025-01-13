@@ -110,6 +110,7 @@ let validateInputs = () => {
 let project = {}
 const addBtn = document.querySelector(".bi-plus-square")
 const newProjectPlace = addBtn.parentElement.parentElement
+const modal = document.querySelector(".modal")
 
 let accepData = () => {
   let skills = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -172,6 +173,7 @@ let createProject = () => {
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject) 
   form.reset()
   card.style.backgroundImage = `url('')`;
+  modal.style.display = "none"
 }
 /* CREATE PROJECT END */
 
