@@ -80,6 +80,7 @@ function createIMG(url) {
 /* CREATE PROJECT START */
 const form = document.querySelector("form");
 let projects = document.querySelector("#projects");
+const $btnCreate = document.querySelector(".modal-footer input")
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -126,6 +127,7 @@ let accepData = () => {
     technologies,
   };
   createProject();
+  hiddenModal();
 };
 
 let createProject = () => {
@@ -171,9 +173,6 @@ let createProject = () => {
     </div>
     `;
   newProjectPlace.insertAdjacentHTML("beforebegin", strutureProject) 
-  form.reset()
-  card.style.backgroundImage = `url('')`;
-  modal.style.display = "none"
 }
 /* CREATE PROJECT END */
 
@@ -182,5 +181,38 @@ let deletePost = (e) => {
 }
 
 let editPost = (e) =>{
-  Array.from(inputs).forEach(input => {input.value = e.parentElement})
+  const bootstrapModal = bootstrap.Modal.getInstance(modal)
+
+  const projectCard = e.closest(".col")
+  const projectName = projectCard.querySelector("#name").textContent.trim()
+  const projectDescription = projectCard.querySelector("#description").textContent.trim()
+  const projectAccessLink = projectCard.querySelector("a[href]").href
+  const projectCodeLink = projectCard.querySelectorAll("a[href]")[1].href
+  const projectImage = projectCard.querySelector(".card-cover").style.backgroundImage
+  const url = projectImage.slice(5, -2)
+
+  const skills = projectCard.querySelector("#skills").innerHTML
+  const checkboxs = document.querySelectorAll(".ui-checkbox")
+  checkboxs.forEach(checkbox => {
+    checkbox.checked = skills.includes(checkbox.value)
+  })
+
+  document.querySelector("#floatingName").value = projectName
+  document.querySelector("#floatingDescription").value = projectDescription
+  document.querySelector("#floatingLinkAccess").value = projectAccessLink
+  document.querySelector("#floatingLinkCode").value = projectCodeLink
+  document.querySelector("#cover").style.backgroundImage = `url('${url}')`
+
+  console.log(projectCard)
+  bootstrapModal.show() 
 }
+
+let hiddenModal = () => { 
+  const bootstrapModal = bootstrap.Modal.getInstance(modal)
+  Array.from(inputs).forEach(input => {input.value = ""})
+  form.reset()
+  card.style.backgroundImage = `url('')`;
+  bootstrapModal.hide()
+}
+
+

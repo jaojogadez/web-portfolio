@@ -90,61 +90,6 @@
         </div>
       </div>
     </nav>
-    <!-- PROJECTS START -->
-    <div class="container-xl px-4 py-5" id="custom-cards">
-      <h2 class="pb-2 border-bottom" data-aos="fade-down">Main projects:</h2>
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" id="projects">
-        <div class="col" data-aos="fade-up">
-          <div class="shadow-lg rounded-bottom rounded-top">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center position-relative" style="background-image: url('assets/projects/echo-lights-page.png');">
-              <div class="dropdown position-absolute">
-                <button class="btn btn-dark btn-sm rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-three-dots-vertical"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item"><i class="bi bi-pencil-square"></i> Edit</a></li>
-                  <li><a class="dropdown-item text-bg-danger" onClick="deletePost(this)"><i class="bi bi-trash3"></i> Delete</a></li>
-                </ul>
-              </div>              
-            </div>
-            <div class="card-body text-bg-light p-3 rounded-bottom">
-              <h3 class="lh-1 fw-semibold" id="name">Echo Lights</h3>
-              <p class="card-text" id="description">
-                Uma web page feita com Bootstrap, visualmente atraente, moderna e responsiva em todos os dispositivos.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://jaojogadez.github.io/landing-page-echo-lights/" target="_blank">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      <i class="bi bi-app-indicator"></i> Access
-                    </button>
-                  </a>
-                  <a href="https://github.com/jaojogadez/landing-page-echo-lights.git" target="_blank">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      <i class="bi bi-github"></i> Code
-                    </button>
-                  </a>
-                </div>
-                <small class="text-muted" id="skills">      
-                  <i class="devicon-git-plain colored fs-4"></i>
-                  <i class="devicon-google-plain colored fs-4"></i>
-                  <i class="devicon-bootstrap-plain colored fs-4"></i>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="22" style="margin-bottom: 12px;"/>
-                  <i class="devicon-css3-plain colored fs-4"></i>
-                  <i class="devicon-html5-plain colored fs-4"></i>
-                </small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-center justify-content-center" id="addBtn" data-aos="fade-left">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="addProjectBtn">
-            <i class="bi bi-plus-square"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- PROJECTS END -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -249,13 +194,69 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <input type="submit" value="Create" class="btn btn-primary">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="hiddenModal()">Close</button>
+              <input type="submit" value="Create" class="btn btn-primary" >
             </div>
           </form>
         </div>
       </div>
     </div>
+    <!-- PROJECTS START -->
+    <div class="container-xl px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom" data-aos="fade-down">Main projects:</h2>
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" id="projects">
+        <div class="col" data-aos="fade-up">
+          <div class="shadow-lg rounded-bottom rounded-top">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-1 shadow-sm rounded-top d-flex align-items-center justify-content-center position-relative" style="background-image: url('assets/projects/echo-lights-page.png');">
+              <div class="dropdown position-absolute">
+                <button class="btn btn-dark btn-sm rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item"><i class="bi bi-pencil-square"></i> Edit</a></li>
+                  <li><a class="dropdown-item text-bg-danger" onClick="deletePost(this)"><i class="bi bi-trash3"></i> Delete</a></li>
+                </ul>
+              </div>              
+            </div>
+            <div class="card-body text-bg-light p-3 rounded-bottom">
+              <h3 class="lh-1 fw-semibold" id="name">Echo Lights</h3>
+              <p class="card-text" id="description">
+                Uma web page feita com Bootstrap, visualmente atraente, moderna e responsiva em todos os dispositivos.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://jaojogadez.github.io/landing-page-echo-lights/" target="_blank">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <i class="bi bi-app-indicator"></i> Access
+                    </button>
+                  </a>
+                  <a href="https://github.com/jaojogadez/landing-page-echo-lights.git" target="_blank">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <i class="bi bi-github"></i> Code
+                    </button>
+                  </a>
+                </div>
+                <small class="text-muted" id="skills">      
+                  <i class="devicon-git-plain colored fs-4"></i>
+                  <i class="devicon-google-plain colored fs-4"></i>
+                  <i class="devicon-bootstrap-plain colored fs-4"></i>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="22" style="margin-bottom: 12px;"/>
+                  <i class="devicon-css3-plain colored fs-4"></i>
+                  <i class="devicon-html5-plain colored fs-4"></i>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center" id="addBtn" data-aos="fade-left">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="addProjectBtn">
+            <i class="bi bi-plus-square"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECTS END -->
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="scripts/script.js"></script>
     <script>
