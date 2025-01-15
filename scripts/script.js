@@ -182,7 +182,7 @@ let deletePost = (e) => {
 
 let editPost = (e) =>{
   const bootstrapModal = bootstrap.Modal.getInstance(modal)
-
+  
   const projectCard = e.closest(".col")
   const projectName = projectCard.querySelector("#name").textContent.trim()
   const projectDescription = projectCard.querySelector("#description").textContent.trim()
@@ -201,9 +201,10 @@ let editPost = (e) =>{
   document.querySelector("#floatingDescription").value = projectDescription
   document.querySelector("#floatingLinkAccess").value = projectAccessLink
   document.querySelector("#floatingLinkCode").value = projectCodeLink
-  document.querySelector("#cover").style.backgroundImage = `url('${url}')`
+  // document.querySelector("#cover").style.backgroundImage = `url('${url}')`
 
-  console.log(projectCard)
+  e.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
+
   bootstrapModal.show() 
 }
 
