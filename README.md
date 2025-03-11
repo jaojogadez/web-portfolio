@@ -2,7 +2,7 @@
 
 Meu portfólio para web desenvolvimento! :D
 
-🔗 Acesse o projeto: https://github.com/jaojogadez/web-portfolio
+🔗 Acesse o projeto: [https://github.com/jaojogadez/web-portfolio](https://jaojogadez.github.io/web-portfolio/)
 
 ## ✨ Recursos
 
